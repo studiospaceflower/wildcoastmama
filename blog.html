@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All posts from Wild Coast Mama — van life, pregnancy, Cornwall, one-hob recipes and dog life.">
+  <title>Blog | Wild Coast Mama</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="site-logo">
+          <span class="site-logo__name">Wild Coast Mama</span>
+          <span class="site-logo__tag">Van life · Pregnancy · Cornwall</span>
+        </a>
+        <nav>
+          <a href="blog.html">Blog</a>
+          <a href="#">Recipes</a>
+          <a href="#">Cornwall</a>
+          <a href="#">About</a>
+          <a href="#" class="nav-cta">Free Downloads</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="blog-header">
+    <div class="container--narrow">
+      <p class="label" style="margin-bottom: 1rem;">All posts</p>
+      <h1>The blog</h1>
+      <p>Every Tuesday. Honest, specific, and usually involving Tilly.</p>
+    </div>
+  </section>
+
+  <!-- ── FILTER PILLS ────────────────────────────────────── -->
+  <div style="border-bottom: 0.5px solid var(--dust); padding: 1.2rem 0; background: #fff; position: sticky; top: 65px; z-index: 50;">
+    <div class="container">
+      <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+        <button onclick="filter('all')" class="filter-btn filter-btn--active" style="font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;border:0.5px solid var(--teal-mid);color:var(--teal-mid);background:transparent;cursor:pointer;">All</button>
+        <button onclick="filter('van')" class="filter-btn" style="font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;border:0.5px solid var(--gravel);color:var(--stone);background:transparent;cursor:pointer;">Van Life</button>
+        <button onclick="filter('preg')" class="filter-btn" style="font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;border:0.5px solid var(--gravel);color:var(--stone);background:transparent;cursor:pointer;">Pregnancy</button>
+        <button onclick="filter('corn')" class="filter-btn" style="font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;border:0.5px solid var(--gravel);color:var(--stone);background:transparent;cursor:pointer;">Cornwall</button>
+        <button onclick="filter('recipe')" class="filter-btn" style="font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;border:0.5px solid var(--gravel);color:var(--stone);background:transparent;cursor:pointer;">Recipes</button>
+        <button onclick="filter('dog')" class="filter-btn" style="font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;border:0.5px solid var(--gravel);color:var(--stone);background:transparent;cursor:pointer;">Dog Life</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="blog-grid">
+    <div class="container">
+      <div class="blog-grid-inner">
+
+        <article class="blog-card" data-cat="van">
+          <div class="blog-card__image"></div>
+          <div>
+            <span class="blog-card__category cat--van">Van Life</span>
+            <h3><a href="post.html">Why We Chose Van Life Over a Mortgage — And Found Out We Were Pregnant</a></h3>
+            <p class="blog-card__excerpt">There is a moment when you realise your life has taken a very unexpected turn. For me it involved spray foam, conduit cable, and Tilly.</p>
+            <span class="blog-card__date">19 May 2026</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-cat="van">
+          <div class="blog-card__image"></div>
+          <div>
+            <span class="blog-card__category cat--van">Van Life</span>
+            <h3><a href="#">Our Van Build Story: From Empty Shell to Rolling Home</a></h3>
+            <p class="blog-card__excerpt">Every mistake, every win, and the one argument about the diesel heater that technically never ended.</p>
+            <span class="blog-card__date">26 May 2026</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-cat="preg">
+          <div class="blog-card__image"></div>
+          <div>
+            <span class="blog-card__category cat--preg">Pregnancy</span>
+            <h3><a href="#">Finding Out I Was Pregnant While Living in a Van: The Real Story</a></h3>
+            <p class="blog-card__excerpt">I took the test at seven in the morning and stood staring at it for so long that Tilly came to check on me.</p>
+            <span class="blog-card__date">2 Jun 2026</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-cat="recipe">
+          <div class="blog-card__image"></div>
+          <div>
+            <span class="blog-card__category cat--recipe">Recipes</span>
+            <h3><a href="#">5 Healthy One-Hob Meals I Eat Every Week in the Van</a></h3>
+            <p class="blog-card__excerpt">One hob ring, real ingredients, twenty minutes. Tilly gets a chickpea as a tax on each one. Non-negotiable.</p>
+            <span class="blog-card__date">9 Jun 2026</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-cat="van">
+          <div class="blog-card__image"></div>
+          <div>
+            <span class="blog-card__category cat--van">Van Life</span>
+            <h3><a href="#">Van Life on a Budget: How Much Does It Really Cost?</a></h3>
+            <p class="blog-card__excerpt">The honest numbers. Build costs, running costs, and the things nobody tells you about.</p>
+            <span class="blog-card__date">16 Jun 2026</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-cat="dog">
+          <div class="blog-card__image"></div>
+          <div>
+            <span class="blog-card__category cat--dog">Dog Life</span>
+            <h3><a href="#">The Best Cornish Beaches for Dogs: Tilly's Top Picks</a></h3>
+            <p class="blog-card__excerpt">Tilly has reviewed all relevant beaches with the quiet confidence of someone whose standards are non-negotiable.</p>
+            <span class="blog-card__date">23 Jun 2026</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-cat="preg">
+          <div class="blog-card__image"></div>
+          <div>
+            <span class="blog-card__category cat--preg">Pregnancy</span>
+            <h3><a href="#">My First Trimester in a Van: Honest Truths Nobody Tells You</a></h3>
+            <p class="blog-card__excerpt">Nausea plus spray foam fumes plus a golden retriever who wanted to help is a specific kind of experience.</p>
+            <span class="blog-card__date">30 Jun 2026</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-cat="corn">
+          <div class="blog-card__image"></div>
+          <div>
+            <span class="blog-card__category cat--corn">Cornwall</span>
+            <h3><a href="#">Hidden Beaches of Cornwall: Our Wild Swimming Spots (Dog Approved)</a></h3>
+            <p class="blog-card__excerpt">The beaches that don't make the tourist guides, and exactly why we love them for that.</p>
+            <span class="blog-card__date">21 Jul 2026</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-brand__name">Wild Coast Mama</div>
+          <p>Van life, pregnancy, Cornwall, and one very opinionated golden retriever. The honest version.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Read</h4>
+          <ul>
+            <li><a href="#">Van Life</a></li>
+            <li><a href="#">Pregnancy</a></li>
+            <li><a href="#">Cornwall</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Dog Life</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Download</h4>
+          <ul>
+            <li><a href="#">Van Life Checklist</a></li>
+            <li><a href="#">Cornwall Dog Walk Guide</a></li>
+            <li><a href="#">Pregnancy Journal</a></li>
+            <li><a href="#">Visit the Etsy shop</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Wild Coast Mama</span>
+        <span>wildcoastmama.co.uk</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filter(cat) {
+      const cards = document.querySelectorAll('.blog-card');
+      const btns = document.querySelectorAll('.filter-btn');
+      cards.forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'grid' : 'none';
+      });
+      btns.forEach(btn => {
+        btn.style.borderColor = 'var(--gravel)';
+        btn.style.color = 'var(--stone)';
+      });
+      event.target.style.borderColor = 'var(--teal-mid)';
+      event.target.style.color = 'var(--teal-mid)';
+    }
+  </script>
+
+</body>
+</html>

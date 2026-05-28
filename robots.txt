@@ -1,0 +1,10 @@
+# Wild Coast Mama — robots.txt
+
+User-agent: *
+Allow: /
+
+# Keep the admin panel out of search engines
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://wildcoastmama.co.uk/sitemap.xml
