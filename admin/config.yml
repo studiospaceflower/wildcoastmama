@@ -1,0 +1,198 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Allows users to log in via Netlify Identity
+publish_mode: editorial_workflow
+
+# Where uploaded images get stored
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # ── BLOG POSTS ──────────────────────────────────────────
+  - name: "posts"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "post.html"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "The full post title — keep under 60 characters for SEO"
+
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        hint: "Schedule for a Tuesday at 8am"
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Van Life", value: "van" }
+          - { label: "Pregnancy", value: "preg" }
+          - { label: "Cornwall", value: "corn" }
+          - { label: "Recipes", value: "recipe" }
+          - { label: "Dog Life", value: "dog" }
+
+      - label: "Strapline"
+        name: "strapline"
+        widget: "string"
+        hint: "One italic sentence under the title — sets the tone"
+        required: false
+
+      - label: "Featured Image"
+        name: "featured_image"
+        widget: "image"
+        required: false
+        hint: "Upload your photo here — 1200x630px minimum"
+
+      - label: "Featured Image Alt Text"
+        name: "image_alt"
+        widget: "string"
+        required: false
+        hint: "Describe the image for accessibility and SEO"
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Write your post here. Use ## for headings. Use > for pull quotes."
+
+      - label: "Tilly's Note"
+        name: "tilly_note"
+        widget: "string"
+        required: false
+        hint: "Tilly's verdict on this post. Keep it in character."
+
+      - label: "SEO Meta Description"
+        name: "description"
+        widget: "string"
+        hint: "Keep under 160 characters — this appears in Google search results"
+        required: false
+
+      - label: "Pillar Post?"
+        name: "pillar"
+        widget: "boolean"
+        default: false
+        hint: "Pillar posts are longer and built to rank in Google. Mark with a ★ in the content calendar."
+
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        hint: "Toggle on to save without publishing"
+
+  # ── RECIPES ─────────────────────────────────────────────
+  - name: "recipes"
+    label: "Recipes"
+    label_singular: "Recipe"
+    folder: "posts/recipes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Recipe Name"
+        name: "title"
+        widget: "string"
+
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+
+      - label: "Section"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Plant-based", value: "plant" }
+          - { label: "Meat", value: "meat" }
+          - { label: "Fish", value: "fish" }
+          - { label: "Breakfasts", value: "breakfast" }
+
+      - label: "Strapline"
+        name: "strapline"
+        widget: "string"
+        hint: "One sentence — the mood of the recipe"
+        required: false
+
+      - label: "Featured Image"
+        name: "featured_image"
+        widget: "image"
+        required: false
+
+      - label: "Serves"
+        name: "serves"
+        widget: "string"
+        hint: "e.g. 2 or 2–3"
+
+      - label: "Time"
+        name: "time"
+        widget: "string"
+        hint: "e.g. 20 minutes"
+
+      - label: "Hob rings"
+        name: "hobs"
+        widget: "select"
+        options:
+          - { label: "One hob", value: "One hob" }
+          - { label: "Two hobs", value: "Two hobs" }
+          - { label: "One or two hobs", value: "One or two hobs" }
+
+      - label: "Difficulty"
+        name: "difficulty"
+        widget: "select"
+        options:
+          - { label: "Easy", value: "Easy" }
+          - { label: "Medium", value: "Medium" }
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Write ingredients and method here. Use ## Ingredients and ## Method as headings."
+
+      - label: "Tilly's Note"
+        name: "tilly_note"
+        widget: "string"
+        required: false
+
+      - label: "SEO Meta Description"
+        name: "description"
+        widget: "string"
+        required: false
+
+  # ── PAGES ───────────────────────────────────────────────
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Site Settings"
+        name: "settings"
+        file: "content/settings.json"
+        fields:
+          - label: "Site Tagline"
+            name: "tagline"
+            widget: "string"
+            default: "Van life · Pregnancy · Cornwall"
+          - label: "Etsy Shop URL"
+            name: "etsy_url"
+            widget: "string"
+            default: "https://etsy.com/shop/WildCoastMama"
+          - label: "Instagram Handle"
+            name: "instagram"
+            widget: "string"
+            default: "@wildcoastmama"
+          - label: "Email List Provider URL"
+            name: "email_url"
+            widget: "string"
+            hint: "Your Mailchimp or ConvertKit signup URL"
+            default: ""
